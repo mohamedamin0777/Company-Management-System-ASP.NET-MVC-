@@ -1,0 +1,49 @@
+﻿@model EmployeeViewModels
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee Details</h1>
+<br />
+<br />
+
+@* @if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        <h3>@TempData["Message"]</h3>
+    </div>
+} *@
+
+<div class="row">
+    <div class="cal-12">
+        <div class="form-group">
+            <label asp-for="@Model.Name" class="col-form-label"></label>
+            <input asp-for="@Model.Name" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Address" class="col-form-label"></label>
+            <input asp-for="@Model.Address" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Salary" class="col-form-label"></label>
+            <input asp-for="@Model.Salary" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EmailAddress" class="col-form-label"></label>
+            <input asp-for="@Model.EmailAddress" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.HireDate" class="col-form-label"></label>
+            <input asp-for="@Model.HireDate" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DepartmentId" class="col-form-label"></label>
+            <input asp-for="@Model.DepartmentId" class="form-control" readonly />
+        </div>
+        <br />
+
+        <a class="btn btn-success" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+        <a asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</div>
+

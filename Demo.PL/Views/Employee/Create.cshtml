@@ -1,0 +1,15 @@
+﻿@model EmployeeViewModels
+@{
+    ViewData["Title"] = "Create";
+    // var Departments = new SelectList(ViewBag.Departments, "Id", "Name");
+}
+
+<div class="row mb-3">
+    <div class="col-8">
+        <form asp-action="Create" asp-controller="Employee" enctype="multipart/form-data">
+            <partial name="PartialViews/CreateUpdatePartialView" />
+
+            <input type="submit" value="Add" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
